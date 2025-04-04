@@ -1,0 +1,933 @@
+/* Language Settings Styles */
+.language-preview-container {
+    margin-top: 15px;
+    padding: 15px;
+    background-color: #f8f9fa;
+    border-radius: 8px;
+    border: 1px solid #e9ecef;
+}
+
+.language-preview-label {
+    font-weight: 600;
+    margin-bottom: 10px;
+    color: #495057;
+}
+
+.language-preview {
+    padding: 12px;
+    background-color: white;
+    border-radius: 6px;
+    border: 1px solid #dee2e6;
+    min-height: 60px;
+    line-height: 1.5;
+    font-size: 14px;
+    color: #212529;
+    transition: all 0.3s ease;
+}
+
+/* Language-specific styles */
+[data-language="my"] {
+    font-family: 'Myanmar Text', 'Pyidaungsu', sans-serif;
+}
+
+[data-language="th"] {
+    font-family: 'Kanit', 'Sarabun', sans-serif;
+}
+
+/* Settings Modal Styles */
+.settings-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    padding: 10px;
+}
+
+.settings-section {
+    background-color: #f8f9fa;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.settings-section-title {
+    color: #495057;
+    font-weight: 600;
+    margin-bottom: 15px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #dee2e6;
+}
+
+.form-label {
+    font-weight: 500;
+    color: #495057;
+}
+
+.form-control, .form-select {
+    border-radius: 6px;
+    border: 1px solid #ced4da;
+    padding: 8px 12px;
+    transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.form-control:focus, .form-select:focus {
+    border-color: #80bdff;
+    box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
+}
+
+.form-check-label {
+    color: #495057;
+}
+
+.modal-footer {
+    border-top: 1px solid #dee2e6;
+    padding: 15px 20px;
+}
+
+.btn-primary {
+    background-color: #007bff;
+    border-color: #007bff;
+    padding: 8px 16px;
+    font-weight: 500;
+    transition: all 0.2s ease;
+}
+
+.btn-primary:hover {
+    background-color: #0069d9;
+    border-color: #0062cc;
+}
+
+.btn-secondary {
+    background-color: #6c757d;
+    border-color: #6c757d;
+    padding: 8px 16px;
+    font-weight: 500;
+    transition: all 0.2s ease;
+}
+
+.btn-secondary:hover {
+    background-color: #5a6268;
+    border-color: #545b62;
+}
+
+/* Success Message Styles */
+.success-modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1050;
+}
+
+.membership-success {
+    background-color: white;
+    border-radius: 8px;
+    padding: 30px;
+    text-align: center;
+    max-width: 400px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.success-icon {
+    font-size: 48px;
+    color: #28a745;
+    margin-bottom: 20px;
+}
+
+.membership-success h3 {
+    color: #212529;
+    margin-bottom: 15px;
+}
+
+.membership-success p {
+    color: #6c757d;
+    margin-bottom: 25px;
+}
+
+.close-success-btn {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    padding: 8px 20px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+.close-success-btn:hover {
+    background-color: #0069d9;
+}
+
+/* Settings Alert Styles */
+.settings-alert {
+    position: relative;
+    padding: 12px 15px;
+    margin-bottom: 15px;
+    border-radius: 4px;
+    animation: fadeIn 0.3s ease-in-out;
+    z-index: 1000;
+}
+
+.settings-alert-success {
+    background-color: rgba(76, 175, 80, 0.1);
+    border-left: 4px solid #4CAF50;
+    color: #2E7D32;
+}
+
+.settings-alert-info {
+    background-color: rgba(33, 150, 243, 0.1);
+    border-left: 4px solid #2196F3;
+    color: #1565C0;
+}
+
+.settings-alert-error {
+    background-color: rgba(244, 67, 54, 0.1);
+    border-left: 4px solid #F44336;
+    color: #C62828;
+}
+
+.alert-content {
+    display: flex;
+    align-items: center;
+}
+
+.alert-content i {
+    margin-right: 10px;
+    font-size: 18px;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* Settings Modal Improvements */
+.settings-body {
+    max-height: 80vh;
+    overflow-y: auto;
+    padding: 20px;
+}
+
+.settings-section {
+    margin-bottom: 25px;
+    padding: 15px;
+    background-color: rgba(255, 255, 255, 0.05);
+    border-radius: 8px;
+    transition: all 0.3s ease;
+}
+
+.settings-section:hover {
+    background-color: rgba(255, 255, 255, 0.08);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.settings-section h3 {
+    margin-top: 0;
+    margin-bottom: 15px;
+    color: #D4A373;
+    font-size: 1.2rem;
+}
+
+.settings-section label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 500;
+}
+
+.settings-section input[type="text"],
+.settings-section input[type="email"],
+.settings-section select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 4px;
+    background-color: rgba(255, 255, 255, 0.05);
+    color: inherit;
+    transition: all 0.3s ease;
+}
+
+.settings-section input[type="text"]:focus,
+.settings-section input[type="email"]:focus,
+.settings-section select:focus {
+    border-color: #D4A373;
+    outline: none;
+    box-shadow: 0 0 0 2px rgba(212, 163, 115, 0.3);
+}
+
+.settings-section input[type="checkbox"] {
+    margin-right: 10px;
+}
+
+.settings-section .checkbox-label {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+    cursor: pointer;
+}
+
+.settings-section .checkbox-label:hover {
+    color: #D4A373;
+}
+
+.settings-footer {
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px;
+    margin-top: 20px;
+    padding-top: 15px;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.save-settings-btn,
+.cancel-settings-btn {
+    padding: 8px 16px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+
+.save-settings-btn {
+    background-color: #D4A373;
+    color: #1A1A1A;
+}
+
+.save-settings-btn:hover {
+    background-color: #C49262;
+    transform: translateY(-2px);
+}
+
+.cancel-settings-btn {
+    background-color: rgba(255, 255, 255, 0.1);
+    color: inherit;
+}
+
+.cancel-settings-btn:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+    transform: translateY(-2px);
+}
+
+/* Dark theme support */
+[data-theme="dark"] .settings-section {
+    background-color: rgba(0, 0, 0, 0.2);
+}
+
+[data-theme="dark"] .settings-section:hover {
+    background-color: rgba(0, 0, 0, 0.3);
+}
+
+[data-theme="dark"] .settings-section input[type="text"],
+[data-theme="dark"] .settings-section input[type="email"],
+[data-theme="dark"] .settings-section select {
+    background-color: rgba(0, 0, 0, 0.3);
+    border-color: rgba(255, 255, 255, 0.05);
+}
+
+/* Font size support */
+[data-font-size="small"] .settings-section h3 {
+    font-size: 1rem;
+}
+
+[data-font-size="medium"] .settings-section h3 {
+    font-size: 1.2rem;
+}
+
+[data-font-size="large"] .settings-section h3 {
+    font-size: 1.4rem;
+}
+
+/* Theme Toggle Styles */
+.theme-toggle {
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.theme-toggle:hover {
+    transform: rotate(15deg);
+}
+
+.theme-toggle i {
+    font-size: 1.2rem;
+}
+
+/* Dark Mode Styles */
+:root {
+    --bg-color: #ffffff;
+    --text-color: #212529;
+    --card-bg: #f8f9fa;
+    --border-color: #dee2e6;
+    --modal-bg: #ffffff;
+    --input-bg: #ffffff;
+    --input-border: #ced4da;
+    --shadow-color: rgba(0, 0, 0, 0.1);
+}
+
+[data-theme="dark"] {
+    --bg-color: #1a1a1a;
+    --text-color: #f8f9fa;
+    --card-bg: #2d2d2d;
+    --border-color: #404040;
+    --modal-bg: #2d2d2d;
+    --input-bg: #333333;
+    --input-border: #404040;
+    --shadow-color: rgba(0, 0, 0, 0.3);
+}
+
+body {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.navbar {
+    background-color: var(--card-bg) !important;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.navbar-dark {
+    background-color: var(--card-bg) !important;
+}
+
+.navbar-dark .navbar-nav .nav-link {
+    color: var(--text-color);
+}
+
+.navbar-dark .navbar-toggler-icon {
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba(255, 255, 255, 0.55)' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+}
+
+.card {
+    background-color: var(--card-bg);
+    border-color: var(--border-color);
+}
+
+.modal-content {
+    background-color: var(--modal-bg);
+    border-color: var(--border-color);
+}
+
+.modal-header {
+    border-bottom-color: var(--border-color);
+}
+
+.modal-footer {
+    border-top-color: var(--border-color);
+}
+
+.form-control, .form-select {
+    background-color: var(--input-bg);
+    border-color: var(--input-border);
+    color: var(--text-color);
+}
+
+.form-control:focus, .form-select:focus {
+    background-color: var(--input-bg);
+    border-color: #80bdff;
+    color: var(--text-color);
+}
+
+.settings-section {
+    background-color: var(--card-bg);
+    border-color: var(--border-color);
+}
+
+.settings-section-title {
+    color: var(--text-color);
+    border-bottom-color: var(--border-color);
+}
+
+.form-label {
+    color: var(--text-color);
+}
+
+.dropdown-menu {
+    background-color: var(--modal-bg);
+    border-color: var(--border-color);
+}
+
+.dropdown-item {
+    color: var(--text-color);
+}
+
+.dropdown-item:hover {
+    background-color: var(--card-bg);
+}
+
+.dropdown-divider {
+    border-top-color: var(--border-color);
+}
+
+/* Theme Toggle Animation */
+.theme-toggle i.fa-sun {
+    color: #ffc107;
+}
+
+.theme-toggle i.fa-moon {
+    color: #f8f9fa;
+}
+
+[data-theme="dark"] .theme-toggle i.fa-moon {
+    color: #ffc107;
+}
+
+[data-theme="dark"] .theme-toggle i.fa-sun {
+    color: #f8f9fa;
+}
+
+/* Elegant Alert Styles */
+.elegant-alert {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    z-index: 9999;
+    opacity: 0;
+    transform: translateY(-20px);
+    transition: opacity 0.3s ease, transform 0.3s ease;
+    max-width: 400px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.elegant-alert.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.elegant-alert-content {
+    display: flex;
+    align-items: center;
+    padding: 16px 20px;
+    background-color: #ffffff;
+    border-left: 4px solid #4CAF50;
+    color: #333;
+    font-family: 'Poppins', sans-serif;
+}
+
+.elegant-alert-icon {
+    margin-right: 15px;
+    font-size: 24px;
+    color: #4CAF50;
+}
+
+.elegant-alert-message {
+    flex: 1;
+    font-size: 15px;
+    font-weight: 500;
+}
+
+.elegant-alert-close {
+    background: none;
+    border: none;
+    color: #999;
+    cursor: pointer;
+    font-size: 18px;
+    padding: 0;
+    margin-left: 15px;
+    transition: color 0.2s ease;
+}
+
+.elegant-alert-close:hover {
+    color: #333;
+}
+
+/* Dark theme support */
+[data-theme="dark"] .elegant-alert-content {
+    background-color: #2c2c2c;
+    color: #f5f5f5;
+    border-left: 4px solid #66bb6a;
+}
+
+[data-theme="dark"] .elegant-alert-icon {
+    color: #66bb6a;
+}
+
+[data-theme="dark"] .elegant-alert-close {
+    color: #aaa;
+}
+
+[data-theme="dark"] .elegant-alert-close:hover {
+    color: #f5f5f5;
+}
+
+/* Responsive Design Styles */
+@media (max-width: 1200px) {
+    .container {
+        width: 95%;
+        padding: 0 15px;
+    }
+    
+    .settings-container {
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    }
+}
+
+@media (max-width: 992px) {
+    .settings-container {
+        grid-template-columns: 1fr;
+    }
+    
+    .settings-section {
+        margin-bottom: 15px;
+    }
+    
+    .modal-dialog {
+        max-width: 90%;
+        margin: 10px auto;
+    }
+}
+
+@media (max-width: 768px) {
+    .navbar-nav {
+        flex-direction: column;
+    }
+    
+    .nav-item {
+        margin: 5px 0;
+    }
+    
+    .modal-dialog {
+        margin: 5px auto;
+    }
+    
+    .modal-body {
+        padding: 10px;
+    }
+    
+    .settings-section {
+        padding: 15px;
+    }
+    
+    .form-control, .form-select {
+        font-size: 14px;
+    }
+    
+    .btn {
+        padding: 6px 12px;
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 576px) {
+    .container {
+        padding: 0 10px;
+    }
+    
+    .modal-dialog {
+        margin: 0;
+        max-width: 100%;
+        height: 100%;
+    }
+    
+    .modal-content {
+        height: 100%;
+        border-radius: 0;
+    }
+    
+    .modal-body {
+        padding: 8px;
+        overflow-y: auto;
+    }
+    
+    .settings-section {
+        padding: 12px;
+    }
+    
+    .settings-section-title {
+        font-size: 14px;
+    }
+    
+    .form-label {
+        font-size: 13px;
+    }
+    
+    .form-control, .form-select {
+        font-size: 13px;
+        padding: 6px 10px;
+    }
+    
+    .btn {
+        padding: 5px 10px;
+        font-size: 13px;
+    }
+    
+    .modal-footer {
+        padding: 10px;
+    }
+    
+    .language-preview {
+        font-size: 13px;
+        padding: 10px;
+    }
+}
+
+/* Extra small devices (phones, less than 5 inches) */
+@media (max-width: 360px) {
+    .container {
+        padding: 0 5px;
+    }
+    
+    .modal-body {
+        padding: 5px;
+    }
+    
+    .settings-section {
+        padding: 10px;
+    }
+    
+    .form-label {
+        font-size: 12px;
+    }
+    
+    .form-control, .form-select {
+        font-size: 12px;
+        padding: 5px 8px;
+    }
+    
+    .btn {
+        padding: 4px 8px;
+        font-size: 12px;
+    }
+    
+    .settings-alert {
+        padding: 8px 12px;
+        font-size: 12px;
+    }
+    
+    .alert-content i {
+        font-size: 14px;
+    }
+}
+
+/* Fix for iOS Safari 100vh issue */
+@supports (-webkit-touch-callout: none) {
+    .modal-dialog {
+        height: -webkit-fill-available;
+    }
+    
+    .modal-content {
+        height: -webkit-fill-available;
+    }
+}
+
+/* Improve touch targets for mobile */
+@media (max-width: 768px) {
+    .form-check-input, 
+    .form-check-label, 
+    .btn, 
+    .nav-link, 
+    .close-settings-btn, 
+    .cancel-settings-btn, 
+    .save-settings-btn {
+        min-height: 44px;
+        min-width: 44px;
+    }
+    
+    .form-check {
+        margin-bottom: 10px;
+    }
+    
+    .form-check-label {
+        padding-left: 10px;
+    }
+}
+
+/* Improve modal scrolling on mobile */
+.modal-body {
+    max-height: 70vh;
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
+}
+
+/* Fix for Android Chrome bottom bar */
+@media (max-width: 576px) {
+    .modal-dialog {
+        margin-bottom: env(safe-area-inset-bottom);
+    }
+}
+
+/* Mobile Responsiveness Improvements */
+@media (max-width: 480px) {
+    /* General mobile adjustments */
+    body {
+        font-size: 14px;
+        overflow-x: hidden;
+    }
+    
+    /* Fix for iOS Safari 100vh issue */
+    .modal {
+        height: calc(var(--vh, 1vh) * 100);
+        max-height: calc(var(--vh, 1vh) * 100);
+    }
+    
+    /* Improve touch targets */
+    button, 
+    .btn, 
+    input[type="button"], 
+    input[type="submit"],
+    select,
+    .form-control {
+        min-height: 44px; /* Apple's recommended minimum touch target size */
+        padding: 10px 15px;
+    }
+    
+    /* Adjust modal for small screens */
+    .modal-dialog {
+        margin: 0;
+        max-width: 100%;
+        height: 100%;
+    }
+    
+    .modal-content {
+        border-radius: 0;
+        height: 100%;
+    }
+    
+    .modal-body {
+        padding: 15px;
+        overflow-y: auto;
+        -webkit-overflow-scrolling: touch;
+    }
+    
+    /* Improve form elements on mobile */
+    .form-control {
+        font-size: 16px; /* Prevent iOS zoom on focus */
+    }
+    
+    /* Adjust spacing for mobile */
+    .mb-3, .mb-4 {
+        margin-bottom: 15px !important;
+    }
+    
+    /* Make dropdowns more touch-friendly */
+    .dropdown-menu {
+        width: 100%;
+        max-height: 200px;
+        overflow-y: auto;
+    }
+    
+    /* Improve alert visibility on mobile */
+    .alert {
+        position: fixed;
+        top: 10px;
+        left: 10px;
+        right: 10px;
+        z-index: 9999;
+        margin: 0;
+        padding: 15px;
+        border-radius: 8px;
+        box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+    }
+    
+    /* Adjust language preview for mobile */
+    .language-preview {
+        padding: 10px;
+        font-size: 14px;
+    }
+    
+    /* Improve settings sections on mobile */
+    .settings-section {
+        padding: 15px;
+        margin-bottom: 15px;
+    }
+    
+    .settings-section h3 {
+        font-size: 18px;
+        margin-bottom: 15px;
+    }
+    
+    /* Adjust form groups for mobile */
+    .form-group {
+        margin-bottom: 15px;
+    }
+    
+    .form-group label {
+        display: block;
+        margin-bottom: 5px;
+    }
+    
+    /* Improve modal footer on mobile */
+    .modal-footer {
+        padding: 15px;
+        flex-direction: column;
+    }
+    
+    .modal-footer .btn {
+        width: 100%;
+        margin: 5px 0;
+    }
+    
+    /* Fix for iOS input zoom */
+    @supports (-webkit-touch-callout: none) {
+        input, select, textarea {
+            font-size: 16px !important;
+        }
+    }
+    
+    /* Improve scrolling performance */
+    * {
+        -webkit-overflow-scrolling: touch;
+    }
+    
+    /* Prevent text size adjustment */
+    html {
+        -webkit-text-size-adjust: 100%;
+    }
+    
+    /* Improve tap highlight color */
+    * {
+        -webkit-tap-highlight-color: rgba(0,0,0,0.1);
+    }
+    
+    /* Fix for sticky hover states on mobile */
+    @media (hover: none) {
+        .btn:hover,
+        .nav-link:hover {
+            background-color: inherit;
+            color: inherit;
+        }
+    }
+}
+
+/* Additional improvements for very small screens */
+@media (max-width: 320px) {
+    body {
+        font-size: 13px;
+    }
+    
+    .modal-body {
+        padding: 10px;
+    }
+    
+    .settings-section {
+        padding: 10px;
+    }
+    
+    .form-control {
+        padding: 8px 12px;
+    }
+    
+    .btn {
+        padding: 8px 12px;
+    }
+}
+
+/* Fix for notched phones */
+@supports (padding: max(0px)) {
+    .modal-body {
+        padding-left: max(15px, env(safe-area-inset-left));
+        padding-right: max(15px, env(safe-area-inset-right));
+        padding-bottom: max(15px, env(safe-area-inset-bottom));
+    }
+    
+    .modal-footer {
+        padding-bottom: max(15px, env(safe-area-inset-bottom));
+    }
+} 
